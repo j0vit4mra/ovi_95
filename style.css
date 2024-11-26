@@ -1,0 +1,119 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* kode css navigator */
+ul{
+    list-style: none;
+    background: chartreuse;
+    padding: 0px 0px;
+    margin: 120px 0px;
+    position: fixed;
+    width: 1280px;
+    height: 60px;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    padding: 10px 8px;
+}
+
+ul li a {
+    padding: 10px 0px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+ul a:hover{
+    background-color: red;
+}
+
+/* kode css dropdown */
+
+ul li ul.dropdown {
+    background: chocolate;
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    top: 60px; /* Posisi dropdown di bawah menu utama */
+    left: 0;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+ul li ul.dropdown li {
+    padding: 10px;
+    text-align: left;
+}
+
+ul li ul.dropdown li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+ul li ul.dropdown li a:hover {
+    background-color: darkred;
+}
+
+/* kode css slide bar */
+.column{
+    float: left; /* Untuk menempatkan kolom secara horizontal */
+    padding: 0 10px; /* Menambahkan ruang di dalam kolom */
+}
+
+/* Left column */
+.column.side{
+    margin: 170px 0; /* Memberi jarak atas dan bawah */
+    width: 250px; /* Lebar sidebar */
+    height: 400px; /* Tinggi sidebar */
+    background-color: aqua; /* Warna latar belakang */
+    border: 1px solid #ccc; /* Tambahkan batas untuk visualisasi */
+    box-sizing: border-box; /* Padding tidak memengaruhi ukuran elemen */
+    overflow: hidden; /* Pastikan konten tidak meluap */
+}
+
+
+Tentu! Berikut adalah versi CSS yang disesuaikan dengan kode HTML yang sudah ada dan diperbaiki agar berjalan dengan benar:
+
+CSS yang Diperbaiki dan Disesuaikan:
+css
+Copy code
+/* Kolom Umum */
+.column {
+    float: left; /* Untuk menempatkan kolom secara horizontal */
+    padding: 0 10px; /* Menambahkan ruang di dalam kolom */
+}
+
+/* Kolom Kiri (Sidebar) */
+.column.side {
+    margin: 170px 0; /* Memberi jarak atas dan bawah */
+    width: 250px; /* Lebar sidebar */
+    height: 400px; /* Tinggi sidebar */
+    background-color: aqua; /* Warna latar belakang */
+    border: 1px solid #ccc; /* Tambahkan batas untuk visualisasi */
+    box-sizing: border-box; /* Padding tidak memengaruhi ukuran elemen */
+    overflow: hidden; /* Pastikan konten tidak meluap */
+}
+
+/* Kolom Tengah */
+.column.middle {
+    margin-left: 260px; /* Menyesuaikan posisi kolom tengah agar tidak tumpang tindih dengan sidebar */
+    padding: 10px;
+    background-color: #f9f9f9; /* Warna latar belakang */
+    border: 1px solid #ddd; /* Batas kolom tengah */
+    box-sizing: border-box;
+}
