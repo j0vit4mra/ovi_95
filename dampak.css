@@ -6,7 +6,10 @@
 }
 
 body {
+    font-family: 'Arial', sans-serif;
     background-color: #f8dbdb;
+    line-height: 1.6;
+    color: #00492c;
 }
 
 /* Header */
@@ -100,58 +103,81 @@ ul li ul.dropdown li {
     text-align: left;
 }
 
-/* Footer */
-.footer {
-    width: 100%;
-    background-color: #00492c;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    margin-top: 20px;
-    font-family: 'Arial Black', sans-serif;
-    color: white;
+/* Kontainer Konten */
+.container {
+    max-width: 1100px;
+    margin: 80px auto 20px auto;
+    padding: 20px;
 }
 
-/* Content */
-.content {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
-    background-color: #00492c;
-    border-radius: 8px;
-    color: #f7f1f5;
-    font-weight: 500;
-    font-family: 'Arial Black', sans-serif;
-}
-
-.welcome-text {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: #00492c;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 60px;
-}
-
-h3{
-    text-align: center;
+/* Paragraf */
+.paragraph-section {
+    margin-top: 180px;
+    margin-bottom: 40px;
 }
 
 p{
     text-align: justify;
-    margin-top: 15px;
-    font-family: 'Arial', sans-serif;
-    font-size: 17px;
 }
 
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
+h2{
+    margin-top: 5px;
+}
+
+.paragraph-section p {
+    margin-bottom: 20px;
+}
+
+/* Galeri Gambar */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #00492c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
 }

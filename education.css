@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #f8dbdb;
 }
 
@@ -15,7 +16,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 1000;
 }
 
 /* Navbar */
@@ -100,58 +101,67 @@ ul li ul.dropdown li {
     text-align: left;
 }
 
-/* Footer */
-.footer {
-    width: 100%;
-    background-color: #00492c;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    margin-top: 20px;
-    font-family: 'Arial Black', sans-serif;
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #00492c, #046f54);
     color: white;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 250px;
+    border-radius: 10px;
 }
 
-/* Content */
-.content {
+/* Gallery Section */
+.gallery-section {
     display: flex;
     gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Galeri kiri dan kanan */
+.gallery.left,
+.gallery.right {
+    flex: 1;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+/* Konten di tengah */
+.content {
+    flex: 2;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar dalam galeri */
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #00492c;
+    color: white;
+    padding: 15px;
     margin-top: 20px;
 }
 
-.column {
-    flex: 1;
-    padding: 10px;
-    background-color: #00492c;
-    border-radius: 8px;
-    color: #f7f1f5;
-    font-weight: 500;
-    font-family: 'Arial Black', sans-serif;
+h2{
+    margin-top: 20px;
 }
 
-.welcome-text {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: #00492c;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 60px;
-}
-
-h3{
-    text-align: center;
+h4{
+    margin-bottom: 3px;
 }
 
 p{
-    text-align: justify;
-    margin-top: 15px;
-    font-family: 'Arial', sans-serif;
-    font-size: 17px;
-}
-
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
+    margin-bottom: 15px;
 }
